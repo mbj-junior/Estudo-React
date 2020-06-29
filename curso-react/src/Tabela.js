@@ -1,39 +1,54 @@
 import React, { Component } from 'react';
 
-class Tabela extends Component{
-
-    render(){
-        return(
-            <table>
-            <thead>
-              <tr>
+const TableHead = () => {
+    return (
+        <thead>
+            <tr>
                 <th>Autores</th>
                 <th>Livros</th>
                 <th>Preço</th>
                 <th>Remover</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
+            </tr>
+        </thead>
+
+    );
+}
+
+const TableBody = () => {
+    return (
+        <tbody>
+            <tr>
                 <td>Paulo</td>
                 <td>React</td>
                 <td>1000</td>
                 <td><button>Remover</button></td>
-              </tr>
-              <tr>
+            </tr>
+            <tr>
                 <td>Nico</td>
                 <td>React</td>
                 <td>1000</td>
                 <td><button>Remover</button></td>
-              </tr>
-              <tr>
+            </tr>
+            <tr>
                 <td>Daniel</td>
                 <td>React</td>
                 <td>1000</td>
                 <td><button>Remover</button></td>
-              </tr>
-            </tbody>
-          </table>
+            </tr>
+        </tbody>
+
+    );
+}
+
+
+class Tabela extends Component {
+
+    render() {
+        return (
+            <table>
+                <TableHead />
+                <TableBody />
+            </table>
         );
     }
 

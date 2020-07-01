@@ -16,13 +16,22 @@
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 
     <script type="text/babel">
+
+        function MeuComponente() {
+            return (
+                <div>
+                    <h1>Olá React</h1>
+                </div>
+            )
+        }
+
         const root = document.getElementById('root');
 
         let nome = "Goku";
 
-        ReactDOM.render(<h1>Oi, eu sou o {nome}! </h1>,root);
+        ReactDOM.render(<h1>Oi, eu sou o {nome}! <MeuComponente /> </h1>, root);
 
-        
+
 
     </script>
 

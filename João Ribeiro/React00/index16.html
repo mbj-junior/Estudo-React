@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Basico</title>
+</head>
+
+<body>
+
+    <div id="root"></div>
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <script type="text/babel">
+
+        // parent
+        class App extends React.Component {
+            metodo1(texto) {
+                console.log(texto)
+            }
+
+            render() {
+                return (
+                    <div>
+                        <p>Texto do componente Pai</p>
+                        <Child evento={this.metodo1} />
+                    </div>
+                )
+            }
+        }
+
+        //child
+        class Child extends React.Component {
+            render() {
+                return (
+                    <div>
+                        <button onClick={() => this.props.evento('olá')}>Clicar</button>
+                    </div>
+                )
+            }
+        }
+
+        ReactDOM.render(
+            <App nome="Junior" />,
+            document.getElementById('root'));
+
+    </script>
+
+</body>
+
+</html>

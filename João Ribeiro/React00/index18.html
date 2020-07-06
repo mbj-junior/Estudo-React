@@ -20,8 +20,27 @@
         class App extends React.Component {
 
             render() {
-                const nomes = ['Joao', 'Ana', 'Carlos']
-                const final = nomes.map(nomes => <h3>{nomes}</h3>)
+                const nomes = [
+                    'Joao',
+                    'Ana',
+                    'Carlos'
+                ]
+                const pessoas = [
+                    {
+                        nome: "Joao",
+                        profissao: "Estudante"
+                    },
+                    {
+                        nome: "Ana",
+                        profissao: "Gerente"
+                    },
+                    {
+                        nome: "Carlos",
+                        profissao: "Estagiario"
+                    },
+                ]
+
+                const final = pessoas.map(pessoas => <h3>{pessoas.nome} é {pessoas.profissao}</h3>)
                 return (
                     <div>
                         {final}

@@ -17,29 +17,25 @@
 
     <script type="text/babel">
 
-        class App extends React.Component{
-            render(){
-                return(
-                    <p>App Component</p>
+        class App extends React.Component {
+
+            render() {
+                const nomes = ['Joao', 'Ana', 'Carlos']
+                const final = nomes.map(nomes => <h3>{nomes}</h3>)
+                return (
+                    <div>
+                        {final}
+                    </div>
                 )
             }
         }
 
         //______________________________
-   
+
         ReactDOM.render(
-            <App />, 
+            <App />,
             document.getElementById('root')
         )
-
-        let nomes = ['Joao', 'Ana', 'Carlos']
-        let final = nomes.map(n=> 'Bom dia, ' + n)
-        console.log(nomes)
-        console.log(final)
-
-
-
-
     </script>
 
 </body>

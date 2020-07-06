@@ -28,6 +28,10 @@
 
             render() {
 
+                //short circuit
+                return this.state.frase && <p>frase verdadeira</p>
+
+
                 //ternario
                 return(
                     this.state.frase ?

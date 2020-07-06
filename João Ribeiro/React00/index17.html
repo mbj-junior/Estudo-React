@@ -22,12 +22,30 @@
             constructor() {
                 super()
                 this.state = {
-                    Frase: true
+                    frase: true
                 }
             }
 
             render() {
-                if (this.state.Frase) {
+
+                //ternario
+                return(
+                    this.state.frase ?
+                    <p>Frase verdadeira</p> :
+                    <p>Frase falsa</p>
+                )
+
+                //variavel
+                let texto = ''
+                if(this.state.f){
+                    texto = <p>O valor é verdadeiro</p>
+                } else {
+                    texto = <p>O valor está falso</p>
+                }
+                return texto 
+
+                //if - else
+                if (this.state.f) {
                     return <p>True</p>
                 } else {
                     return <p>False</p>

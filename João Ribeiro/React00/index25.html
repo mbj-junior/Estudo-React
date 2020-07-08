@@ -9,7 +9,12 @@
 
 <body>
 
+
     <div id="root"></div>
+
+    <textarea name="texteArea" id="texteArea" cols="30" rows="10">
+        texteArea no html
+    </textarea>
 
     <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
@@ -22,33 +27,30 @@
             constructor() {
                 super()
                 this.state = {
-                    nome: "Junior"
+                    texto: "Estou no construtor"
                 }
+
             }
 
-            alterarNome = (event) => {
-                this.setState({ nome: event.target.value })
+            alterarTexto = (event) =>{
+                this.setState({texto: event.target.value})
             }
-            
+
 
             render() {
                 return (
                     <div>
-                        <p>OI</p>
-                        <input
-                            type="text"
-                            value={this.state.nome}
-                            onChange={this.alterarNome}
-                        />
+                        <textarea onChange={this.alterarTexto} value={this.state.texto} cols="30" rows="10"></textarea>
 
-                        <p>Digitado: {this.state.nome}</p>
+                        <h3>Texto digitado</h3>
+                        <p>{this.state.texto}</p>
                     </div>
                 )
             }
         }
 
         ReactDOM.render(
-            <App cor={true} tamanho={true} />,
+            <App />,
             document.getElementById('root'));
 
     </script>

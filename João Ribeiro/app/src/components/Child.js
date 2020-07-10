@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 export default class Child extends Component {
   Alterar = () => {
-      this.props.funcaoBixano('Robin');
+    this.props.funcaoBixano("Robin");
   };
 
   render() {

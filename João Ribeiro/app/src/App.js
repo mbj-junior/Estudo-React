@@ -1,10 +1,14 @@
-import React from 'react';
+import React from "react";
+import Identificacao from './component/Identificacao'
 
-class App extends React.Component{
-  render(){
-    return(
-      <p>Olá</p>
-    )
+class App extends React.Component {
+  render() {
+    return (
+      <div>
+        <p>Componente principal</p>
+        <Identificacao />
+      </div>
+    );
   }
 }
 

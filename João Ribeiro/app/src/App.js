@@ -11,9 +11,15 @@ class App extends Component {
     nome: "Márcio",
   };
 
-  Alterar = () => {
+  MostraSobrenome = () => {
     this.setState({
       nome: `${this.state.nome} Botelho`,
+    });
+  };
+
+  MostraBixano = (nomeBixano) => {
+    this.setState({
+      bixano: nomeBixano,
     });
   };
 
@@ -21,9 +27,10 @@ class App extends Component {
     return (
       <div>
         <h3>Parent</h3>
-        <button onClick={this.Alterar}>Add Sobrenome</button>
+    <p>Bixano: {this.state.bixano}</p>
+        <button onClick={this.MostraSobrenome}>Add Sobrenome</button>
         <hr />
-        <Child nome={this.state.nome} />
+        <Child nome={this.state.nome} funcaoBixano={this.MostraBixano} />
       </div>
     );
   }

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Identificacao from "./components/Identificacao";
+import Child from "./components/Child";
 
 class App extends Component {
   state = {
@@ -7,10 +7,23 @@ class App extends Component {
     sobrenome: "Jr",
   };
 
+  state = {
+    nome: "Márcio",
+  };
+
+  Alterar = () => {
+    this.setState({
+      nome: `${this.state.nome} Botelho`,
+    });
+  };
+
   render() {
     return (
       <div>
-        <Identificacao nome={this.state.nome} sobrenome={this.state.sobrenome} />
+        <h3>Parent</h3>
+        <button onClick={this.Alterar}>Add Sobrenome</button>
+        <hr />
+        <Child nome={this.state.nome} />
       </div>
     );
   }

@@ -1,16 +1,13 @@
 import React, { Component } from "react";
 
-class Identificacao extends Component {
+export default class Child extends Component {
   render() {
     return (
       <div>
+        <h3>Child</h3>
         <p>Nome: {this.props.nome}</p>
-        <p>Sobrenome: {this.props.sobrenome}</p>
+        <hr />
       </div>
     );
   }
 }
-
-export default Identificacao;
-
-

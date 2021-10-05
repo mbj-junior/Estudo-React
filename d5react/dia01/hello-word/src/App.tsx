@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import { Header } from "./components/Header";
+import { Footer } from "./components/Footer";
 
-function App() {
+const App = () => {
+  let name = "Marcinho";
+  let age = 99;
+
+  const [bg, setBg] = useState("#FF0000");
+  const handleClick = () => {
+    alert("Clicou na função");
+    setBg("#0000FF");
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ background: bg }}>
+      <Header name={name} age={age} />
+      Olá {name}, tudo bem? sua idade {age}
+      <button onClick={handleClick}>Clique aqui</button>
+      <Footer />
     </div>
   );
-}
+};
 
 export default App;

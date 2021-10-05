@@ -29,10 +29,10 @@ const App = () => {
       Olá {name}, tudo bem? sua idade {age}
       {age === 90 && <button onClick={handle20}>20</button>}
       {age === 20 && <button onClick={handle90}>90</button>}
-      <hr/>
+      <hr />
       <ul>
         {list.map((frase, index) => (
-          <li>{frase}</li>
+          <li key={index}>{frase}</li>
         ))}
       </ul>
       <Footer />

@@ -25,7 +25,6 @@ const App = () => {
     <div style={{ background: bg }}>
       <Header name={name} age={age} />
       Olá {name}, tudo bem? sua idade {age}
-      <button onClick={handleClick}>Clique aqui</button>
       {age === 90 && <button onClick={handle20}>20</button>}
       {age === 20 && <button onClick={handle90}>90</button>}
       <Footer />

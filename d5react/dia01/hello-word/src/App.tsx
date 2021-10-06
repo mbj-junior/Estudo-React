@@ -5,15 +5,17 @@ import { Footer } from "./components/Footer";
 const App = () => {
   const [name, steName] = useState("Marcinho");
   const [bg, setBg] = useState("#FF0000");
-
   const [age, setAge] = useState(90);
+
+  const [list, setList] = useState(["frase01", "frase02", "frase03"]);
+
   const handleClick = () => {
     setBg("#0000FF");
   };
 
   const handle20 = () => {
     setAge(20);
-    setBg("#00FF00")
+    setBg("#00FF00");
   };
 
   const handle90 = () => {
@@ -27,6 +29,12 @@ const App = () => {
       Olá {name}, tudo bem? sua idade {age}
       {age === 90 && <button onClick={handle20}>20</button>}
       {age === 20 && <button onClick={handle90}>90</button>}
+      <hr />
+      <ul>
+        {list.map((frase, index) => (
+          <li key={index}>{frase}</li>
+        ))}
+      </ul>
       <Footer />
     </div>
   );
